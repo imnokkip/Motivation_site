@@ -10,7 +10,7 @@ app = Flask(__name__)
 def main():
     quota_url = ["https://api.api-ninjas.com/v2/randomquotes?categories=success,wisdom,life",
                  {"categories": "success,wisdom"},
-                 {"X-Api-Key": "ZLZ1x2RdmfqoiZB5YuVJg4GNhLA1lmdI8lBfTEe9"}
+                 {"X-Api-Key": "ACCESS_KEY"}
             ]
     get_quota = requests.get(quota_url[0], params=quota_url[1], headers=quota_url[2])
     quota = get_quota.json()[0].get('quote')
